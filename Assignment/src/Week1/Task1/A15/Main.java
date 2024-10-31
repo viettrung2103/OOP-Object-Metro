@@ -1,4 +1,6 @@
-package Week2.Thursday;
+package Week1.Task1.A15;
+
+
 
 public class Main {
     public static void main(String[] args) {
@@ -6,6 +8,5 @@ public class Main {
         int numOfCustomer = 10;
         new CustomerGenerator(numOfCustomer, servicePoint);
         servicePoint.serve();
-
     }
 }
