@@ -1,0 +1,33 @@
+# 1.1 Introduction to Simulation 
+## 1. Think of everyday situations that simulation could analyze. What aspects of the situation make the simulation approach specifically appropriate for analyzing the situation (i.e., think about and explain why simulation would be specifically better than experimenting in the real world). What aspects of sustainability can you incorporate into the simulation
+- The complexity, interconnectivity, and variability of the situation make the simulation approach specifically appropriate for analyzing the situation.
+    - Variability: It can be both predictable variations, such as number of operators in a call center during peak hours. And unpredictable variations, such as, the arrival rate of patients at a hospital emergency department.
+    - Interconnectivity: As processes in a operation system is interconnected. An improvement in a components will have a positive effect on the whole system. However, applying changes to the actual system without proper testing will cause unexpected costs or danger, so simulation can play a role here.
+    - Complexity: There are two types of complexity: combinatorial complpexity and dynamic complexity.
+      - Combinatorial complexity is about the numbers of interconnected components inside a system.
+      - Dynamic Complexity: Since parts are interconnected, changes in one components can have huge effect on another components.
+        - Example: Different effects in both short and long run is caused by an action.
+        - Consequences or Effect of one action onto another components are not uniform. They are discretely different.
+        - Non-obvious consequences caused by an action.
+- Aspect of sustainability that I can incorporate into the simulation
+  - Energy Efficiency: implementation of various energy-saving technologies to see their effectiveness in different environment.
+  - Resouce Conservation: Optionzation of water, energy and raw materials usage can be implemented in simulation.
+  - Waste Reduction: Environmental footprints of operation, waste from manufactoring/ logistics operations can be reduced through simulation.
+## 2.Take a real-world operational system that can be observed (bank, supermarket) and identify the elements associated with it in terms of variability, complexity, interconnectedness.
+- Bank:
+  - Variability:
+    - Predictable variable: An increased in clerk during morning as there are more customers in the morning.
+    - Unpredictable variable: A breakdown of IT banking system
+  - Interconnectivity: An improvement in client-serving time at the clerk and increase the amount of total clients served, increase in bank profit.
+  - Complexity:
+    - Combinatorial complexity: waiting desk, clerk, insurance department, administration department.
+    - Dynamic Complexity: in Finland, normally Bank are served in Finnish. However, since there are more English-speaking customer. Bank is adapting English into the workplace.
+- Supermaket:
+    - Variability:
+        - Predictable variable: An increase of cashier during in the afternoon when most people are going shopping after work.
+        - Unpredictable variable: A breakdown in any checkout system.
+    - Interconnected: Changing a popular products to near the entrance can improve the produce sale; however, the queue for checkout will be longer.
+    - Complexity:
+        - Combinatorial complexity: Queue, checkout system, shelfing, logistics
+        - Dynamic Complexity:
+          - To prepare for Christmas, planning for the supermarket, the retailer, the factory is implement. So the request for products in holiday season affect all other components.

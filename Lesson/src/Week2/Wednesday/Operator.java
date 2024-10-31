@@ -1,4 +1,4 @@
-package Week2;
+package Week2.Wednesday;
 
 public class Operator {
     // keyword: final >> const in javascript
