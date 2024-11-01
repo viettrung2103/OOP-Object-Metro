@@ -1,15 +1,14 @@
-package Week1.Task2.A22;
-
+package Week1.Task2.A23;
 
 
 public class Event implements Comparable<Event> {
     private long startTime;
     private String name;
+    EventType eventType;
 
-
-    public Event(String name) {
+    public Event(String name, EventType eventType) {
         this.name = name;
-
+        this.eventType = eventType;
 
     }
 
@@ -23,6 +22,10 @@ public class Event implements Comparable<Event> {
 
     public String getName() {
         return this.name;
+    }
+
+    public EventType getEventType() {
+        return this.eventType;
     }
 
     @Override
@@ -45,7 +48,7 @@ public class Event implements Comparable<Event> {
 
     @Override
     public String toString() {
-        return this.name + " " + "Start Time: " + this.startTime;
+        return this.name + " " + "Start Time: " + this.startTime + " Type: " + this.eventType;
     }
 
 }

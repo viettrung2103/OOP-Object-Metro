@@ -1,8 +1,5 @@
-package Week1.Task2.A22;
+package Week1.Task2.A23;
 
-import Week1.Task2.A23.EventType;
-
-import java.util.Arrays;
 import java.util.PriorityQueue;
 
 
@@ -15,7 +12,7 @@ public class EventList {
     }
 
     public void addEvent(Event e) {
-        System.out.println("Adding " + e.getName() + "with start time " + e.getStartTime());
+        System.out.println("Adding " + e.getName() + " with start time " + e.getStartTime());
         this.queue.add(e);
     }
 
@@ -45,15 +42,15 @@ public class EventList {
 
     public static void main(String[] args) {
         EventList el = new EventList();
-        Event e1 = new Event("Event1");
+        Event e1 = new Event("Event1", EventType.ARRIVAL);
         e1.setStartTime(System.currentTimeMillis());
         System.out.println(e1);
         el.addEvent(e1);
-        Event e2 = new Event("Event2");
+        Event e2 = new Event("Event2", EventType.EXIT);
         e2.setStartTime(System.currentTimeMillis());
         System.out.println(e2);
         el.addEvent(e2);
-        Event e3 = new Event("Event3");
+        Event e3 = new Event("Event3", EventType.ARRIVAL);
         e3.setStartTime((System.currentTimeMillis() + 10));
         System.out.println(e3);
         el.addEvent(e3);
