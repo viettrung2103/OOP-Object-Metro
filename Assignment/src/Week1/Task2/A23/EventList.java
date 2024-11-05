@@ -23,10 +23,13 @@ public class EventList {
     }
 
     public void printEventList() {
-        Object[] convertedArray = this.queue.toArray();
-        for (Object event : convertedArray) {
-            System.out.println("This is " + event);
+        PriorityQueue<Event> tempQueue = new PriorityQueue<>();
+        while (queue.peek() != null) {
+            Event removedEvent = queue.poll();
+            System.out.println(removedEvent);
+            tempQueue.add(removedEvent);
         }
+        this.queue = tempQueue;
 
 
 //        if (this.queue.peek() == null) {
