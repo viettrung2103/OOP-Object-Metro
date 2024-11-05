@@ -1,4 +1,4 @@
-package Week1.Task3;
+package Week1.Task3.A32;
 
 public class AgeDistribution {
     public static void main(String[] args) {
