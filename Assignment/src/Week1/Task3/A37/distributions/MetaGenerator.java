@@ -1,9 +1,9 @@
-package Week1.Task3.A36.distributions;
+package Week1.Task3.A37.distributions;
 
-import javax.swing.*;
-import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.io.FileWriter;
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 
 /** A class which allows for automatically parsing a distribution implementation and generate
  * a class inheriting from Generator accordingly. Use the return type to implements either

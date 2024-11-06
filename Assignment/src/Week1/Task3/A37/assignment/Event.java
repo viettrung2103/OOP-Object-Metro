@@ -1,4 +1,4 @@
-package Week1.Task3.A36.assignment;
+package Week1.Task3.A37.assignment;
 
 
 public class Event implements Comparable<Event> {
@@ -7,26 +7,32 @@ public class Event implements Comparable<Event> {
     private double startTime;
     private long insertTime;
     private String name;
+    private Customer customer;
     EventType eventType;
 
-    public Event(EventType eventType, double startTime) {
+    public Event(Customer customer, EventType eventType, double startTime) {
         this.eventType = eventType;
         this.startTime = startTime;
+        this.customer = customer;
         this.insertTime = System.currentTimeMillis();
         this.name = setName();
 
     }
 
     private String setName() {
-        int count = 0;
-        if (this.eventType.name().equals("ARRIVAL")) {
-            count = arriveCount++;
-        } else {
-            count = exitCount++;
-        }
-        String newName = this.eventType + String.valueOf(count);
+//        int count = 0;
+//        if (this.eventType.name().equals("ARRIVAL")) {
+//            count = arriveCount++;
+//        } else {
+//            count = exitCount++;
+//        }
+        String newName = this.eventType + " Event of " + this.customer.getName();
 
         return newName;
+    }
+
+    public Customer getCustomer() {
+        return this.customer;
     }
 
     public void setStartTime(double time) {

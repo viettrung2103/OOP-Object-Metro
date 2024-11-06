@@ -1,6 +1,5 @@
-package Week1.Task3.A36.assignment;
+package Week1.Task3.A37.assignment;
 
-import java.util.Arrays;
 import java.util.PriorityQueue;
 
 
@@ -23,6 +22,7 @@ public class EventList {
     }
 
     public void printEventList() {
+        System.out.println("Printing Event List: ");
         PriorityQueue<Event> tempQueue = new PriorityQueue<>();
         while (queue.peek() != null) {
             Event removedEvent = queue.poll();
@@ -43,16 +43,17 @@ public class EventList {
 //    public void get
 
     public static void main(String[] args) {
+        Customer customer = new Customer(CustomerType.X);
         EventList el = new EventList();
-        Event e1 = new Event(EventType.ARRIVAL, 1);
+        Event e1 = new Event(customer, EventType.ARRIVAL, 1);
 //        e1.setStartTime(System.currentTimeMillis());
         System.out.println(e1);
         el.addEvent(e1);
-        Event e2 = new Event(EventType.EXIT, 2);
+        Event e2 = new Event(customer, EventType.EXIT, 2);
 //        e2.setStartTime(System.currentTimeMillis());
         System.out.println(e2);
         el.addEvent(e2);
-        Event e3 = new Event(EventType.ARRIVAL, 3);
+        Event e3 = new Event(customer, EventType.ARRIVAL, 3);
 //        e3.setStartTime((System.currentTimeMillis() + 10));
         System.out.println(e3);
         el.addEvent(e3);
