@@ -2,8 +2,8 @@ package Week1.Task3.A37.assignment;
 
 public class Customer {
     private int id;
-    private long startTime;
-    private long endTime;
+    private double startTime;
+    private double endTime;
 
     CustomerType customerType;
     private static int countX = 1;
@@ -47,29 +47,47 @@ public class Customer {
         return this.id;
     }
 
-    public long getArrivalTime() {
+    public double getArrivalTime() {
         return this.startTime;
     }
 
-    public void setArrivalTime(long time) {
+    public void setArrivalTime(double time) {
         this.startTime = time;
     }
 
-    public long getEndTime() {
+    public double getEndTime() {
         return this.endTime;
     }
 
-    public void setEndTime(long time) {
+    public void setEndTime(double time) {
         this.endTime = time;
     }
 
 
-    public long duration() {
+    public double duration() {
         return this.endTime - this.startTime;
     }
 
+    public boolean isSameName(Customer anotherCustomer) {
+        if (anotherCustomer == null) {
+            return false;
+        }
+
+        return this.name.equals(anotherCustomer.getName());
+
+    }
+
     public String toString() {
-        return "Customer #" + this.name + ", Total response time = " + this.duration();
+        if (this.startTime != 0 && this.endTime != 0) {
+            return "Customer #" + this.name + " has been served,Start time t = " + this.getArrivalTime() + ", Total response time = " + this.duration();
+
+        } else if (this.startTime != 0) {
+            return "Customer #" + this.name + ", Start time = " + this.startTime;
+
+        } else {
+            return "Customer #" + this.name;
+        }
+
     }
 
     // service time is time between the start of service and the end of the service
@@ -82,17 +100,17 @@ public class Customer {
         Customer customer3 = new Customer(CustomerType.X);
         Customer customer4 = new Customer(CustomerType.Y);
 
-        customer1.setArrivalTime(System.currentTimeMillis());
-        customer1.setEndTime(System.currentTimeMillis() + 10);
+        customer1.setArrivalTime(1.0);
+        customer1.setEndTime(customer1.startTime + 10);
 
-        customer2.setArrivalTime(System.currentTimeMillis());
-        customer2.setEndTime(System.currentTimeMillis() + 20);
+        customer2.setArrivalTime(2);
+        customer2.setEndTime(customer2.startTime + 20);
 
-        customer3.setArrivalTime(System.currentTimeMillis());
-        customer3.setEndTime(System.currentTimeMillis() + 10);
+        customer3.setArrivalTime(3);
+        customer3.setEndTime(customer3.startTime + 10);
 
-        customer4.setArrivalTime(System.currentTimeMillis());
-        customer4.setEndTime(System.currentTimeMillis() + 20);
+        customer4.setArrivalTime(4);
+        customer4.setEndTime(customer4.startTime + 20);
 
         System.out.println(customer1);
         System.out.println(customer2);

@@ -28,8 +28,12 @@ public class Clock {
     }
 
     public void setCurTime(double time) {
-        this.curTime = time;
-        System.out.println("Clock is moved to t = " + this.curTime);
+        if (this.curTime != time) {
+            this.curTime = time;
+            System.out.println("_______");
+            System.out.println("Clock is moved to t = " + this.curTime);
+
+        }
     }
 
     public void elapse() {

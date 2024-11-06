@@ -11,7 +11,7 @@ public class EventList {
     }
 
     public void addEvent(Event e) {
-        System.out.println("Adding " + e.getName() + " with start time " + e.getStartTime());
+        System.out.println("Adding " + e.getName() + " with Start Time t = " + e.getTime() + " to Event List");
         this.queue.add(e);
     }
 
@@ -19,6 +19,14 @@ public class EventList {
         Event removed = this.queue.remove();
         System.out.println("Remove " + removed.getName() + " from queue.");
         return removed;
+    }
+
+    public Event getEarliestEvent() {
+        return this.queue.poll();
+    }
+
+    public boolean isEmpty() {
+        return this.queue.isEmpty();
     }
 
     public void printEventList() {
@@ -31,6 +39,7 @@ public class EventList {
         }
         this.queue = tempQueue;
     }
+
 
     public PriorityQueue<Event> getQueue() {
         return this.queue;

@@ -60,36 +60,38 @@ public class ArrivalProcess {
     public EventList createEvent(EventList queue) {
         CustomerType customerType = this.getCustomerType();
         Customer newCustomer = new Customer(customerType);
-        double startTime = this.getArrivalTime(newCustomer);
+        double arrivalTime = this.getArrivalTime(newCustomer);
 //        EventType eventType = this.getEventType();
-        Event newEvent = new Event(newCustomer, EventType.ARRIVAL, startTime);
+        Event newEvent = new Event(newCustomer, EventType.ARRIVAL, arrivalTime);
         queue.addEvent(newEvent);
         return queue;
     }
 
+
+
     public static void main(String[] args) {
-        Clock clock = Clock.getInstance();
-        ArrivalProcess arrivalProcess = new ArrivalProcess();
-        EventList queue = new EventList();
-
-        // create 10 events
-        for (int i = 0; i <= 10; i++) {
-//            System.out.println(arrivalProcess.getEventType());
-//            double ranNum = arrivalProcess.getArrivalTime();
-//            System.out.println("Random number: " + ranNum);
-            queue = arrivalProcess.createEvent(queue);
-        }
-        PriorityQueue<Event> tempQueue = new PriorityQueue<>();
-        while (queue.getQueue().peek() != null) {
-            Event removedEvent = queue.getQueue().poll();
-            clock.setCurTime(removedEvent.getStartTime());
-            System.out.println(removedEvent);
-            tempQueue.add(removedEvent);
-        }
-        queue.setQueue(tempQueue);
-
-
-        queue.printEventList();
+//        Clock clock = Clock.getInstance();
+//        ArrivalProcess arrivalProcess = new ArrivalProcess();
+//        EventList queue = new EventList();
+//
+//        // create 10 events
+//        for (int i = 0; i <= 10; i++) {
+////            System.out.println(arrivalProcess.getEventType());
+////            double ranNum = arrivalProcess.getArrivalTime();
+////            System.out.println("Random number: " + ranNum);
+//            queue = arrivalProcess.createEvent(queue);
+//        }
+//        PriorityQueue<Event> tempQueue = new PriorityQueue<>();
+//        while (queue.getQueue().peek() != null) {
+//            Event removedEvent = queue.getQueue().poll();
+//            clock.setCurTime(removedEvent.getStartTime());
+//            System.out.println(removedEvent);
+//            tempQueue.add(removedEvent);
+//        }
+//        queue.setQueue(tempQueue);
+//
+//
+//        queue.printEventList();
 
     }
 }

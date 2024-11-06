@@ -4,15 +4,15 @@ package Week1.Task3.A37.assignment;
 public class Event implements Comparable<Event> {
     private static int arriveCount = 1;
     private static int exitCount = 1;
-    private double startTime;
+    private double time;
     private long insertTime;
     private String name;
     private Customer customer;
     EventType eventType;
 
-    public Event(Customer customer, EventType eventType, double startTime) {
+    public Event(Customer customer, EventType eventType, double time) {
         this.eventType = eventType;
-        this.startTime = startTime;
+        this.time = time;
         this.customer = customer;
         this.insertTime = System.currentTimeMillis();
         this.name = setName();
@@ -20,12 +20,7 @@ public class Event implements Comparable<Event> {
     }
 
     private String setName() {
-//        int count = 0;
-//        if (this.eventType.name().equals("ARRIVAL")) {
-//            count = arriveCount++;
-//        } else {
-//            count = exitCount++;
-//        }
+
         String newName = this.eventType + " Event of " + this.customer.getName();
 
         return newName;
@@ -35,12 +30,12 @@ public class Event implements Comparable<Event> {
         return this.customer;
     }
 
-    public void setStartTime(double time) {
-        this.startTime = time;
+    public void setTime(double time) {
+        this.time = time;
     }
 
-    public double getStartTime() {
-        return this.startTime;
+    public double getTime() {
+        return this.time;
     }
 
     public String getName() {
@@ -53,9 +48,9 @@ public class Event implements Comparable<Event> {
 
     @Override
     public int compareTo(Event e) {
-        if (this.startTime > e.startTime) {
+        if (this.time > e.time) {
             return 1;
-        } else if (this.startTime < e.startTime) {
+        } else if (this.time < e.time) {
             return -1;
         } else {
             // When start times are equal, compare by insertion time for FIFO order.
@@ -74,7 +69,7 @@ public class Event implements Comparable<Event> {
 
     @Override
     public String toString() {
-        return this.name + " " + "Start Time: " + this.startTime + " Type: " + this.eventType;
+        return this.name + " " + "Start Time: t = " + this.time;
     }
 
 }
