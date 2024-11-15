@@ -1,5 +1,7 @@
 package Week1.Task3.A37.assignment;
 
+
+
 public class MainTest {
 
     public static void main(String[] args) {
@@ -7,10 +9,12 @@ public class MainTest {
         // create 10 arrival customer X,Y
         Clock clock = Clock.getInstance();
         ArrivalProcess arrivalProcess = new ArrivalProcess();
+//        ServeProcess serveProcess = new ServeProcess();
         ServicePoint sp = new ServicePoint();
         EventList eventList = new EventList();
 
-        new EventGenerator(10, eventList, arrivalProcess);
+//        new EventGenerator(10, eventList, arrivalProcess);
+//        serveProcess.createTimeGenerator(sp);
         // while loop, until EventList is empty
         while (!eventList.isEmpty()) {
             // when the event List is not empty, get the first event( which has the earliest time
